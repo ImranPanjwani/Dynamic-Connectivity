@@ -15,7 +15,7 @@ public class QuickUnion {
 		return this.id;
 	}
 	
-	private int root(int i){
+	public int getRoot(int i){
 		int root;
 		root = this.id[i];
 		while(root != i){
@@ -27,15 +27,15 @@ public class QuickUnion {
 	
 	public void union(int p,int q){
 		int pRoot,qRoot;
-		pRoot = this.root(p);
-		qRoot = this.root(q);
+		pRoot = this.getRoot(p);
+		qRoot = this.getRoot(q);
 		this.id[pRoot] = qRoot;
 	}
 	public boolean connected(int p,int q){
 		boolean result = false;
 		int pRoot,qRoot;
-		pRoot = this.root(p);
-		qRoot = this.root(q);
+		pRoot = this.getRoot(p);
+		qRoot = this.getRoot(q);
 		if(pRoot == qRoot){
 			result = true;
 		}

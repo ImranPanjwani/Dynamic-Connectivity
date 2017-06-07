@@ -30,7 +30,7 @@ public class QuickFind {
 		return result;
 		/* short form would be
 		 * 
-		 *  return this.n[p]==this.n[q]
+		 *  return this.id[p]==this.id[q]
 		 *  */
 	}
 	
